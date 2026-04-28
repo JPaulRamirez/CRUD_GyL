@@ -1,6 +1,6 @@
 package org.gyl.crudgyl.mapper;
 
-import org.gyl.crudgyl.dto.ProductoResponseDTO;
+
 import org.gyl.crudgyl.dto.TipoProductoRequestDTO;
 import org.gyl.crudgyl.dto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.entity.TipoProducto;
@@ -17,7 +17,7 @@ public class TipoProductoMapper {
         return tipoProducto;
     }
 
-    public static TipoProductoResponseDTO productoResponseDTO (TipoProducto tipoProducto){
+    public static TipoProductoResponseDTO ToResponseDTO (TipoProducto tipoProducto){
         return new TipoProductoResponseDTO(
                 tipoProducto.getId_tipo_producto(),
                 tipoProducto.getNombre(),
