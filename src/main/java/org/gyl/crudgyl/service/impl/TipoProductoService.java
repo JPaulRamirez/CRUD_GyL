@@ -1,7 +1,7 @@
 package org.gyl.crudgyl.service.impl;
 
-import org.gyl.crudgyl.dto.TipoProductoRequestDTO;
-import org.gyl.crudgyl.dto.TipoProductoResponseDTO;
+import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoRequestDTO;
+import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.entity.TipoProducto;
 import org.gyl.crudgyl.exception.RecursoNoEncontradoException;
 import org.gyl.crudgyl.mapper.TipoProductoMapper;

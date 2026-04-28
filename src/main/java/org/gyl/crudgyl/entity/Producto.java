@@ -27,7 +27,7 @@ public class Producto {
     private Integer stock;
 
     @ManyToOne
-    @JoinColumn(name = "id_tipo_producto")
-    private TipoProducto tipoProducto;
+    @JoinColumn(name = "tipo_producto")
+    private TipoProducto id_tipo_producto;
 
 }

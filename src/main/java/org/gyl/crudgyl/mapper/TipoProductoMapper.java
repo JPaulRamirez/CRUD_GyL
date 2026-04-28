@@ -1,8 +1,8 @@
 package org.gyl.crudgyl.mapper;
 
 
-import org.gyl.crudgyl.dto.TipoProductoRequestDTO;
-import org.gyl.crudgyl.dto.TipoProductoResponseDTO;
+import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoRequestDTO;
+import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.entity.TipoProducto;
 
 public class TipoProductoMapper {

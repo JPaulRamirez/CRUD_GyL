@@ -1,7 +1,7 @@
 package org.gyl.crudgyl.mapper;
 
-import org.gyl.crudgyl.dto.ProductoRequestDTO;
-import org.gyl.crudgyl.dto.ProductoResponseDTO;
+import org.gyl.crudgyl.dto.ProductoDto.ProductoRequestDTO;
+import org.gyl.crudgyl.dto.ProductoDto.ProductoResponseDTO;
 import org.gyl.crudgyl.entity.Producto;
 
 public class ProductoMapper {
@@ -20,7 +20,8 @@ public class ProductoMapper {
                 producto.getId(),
                 producto.getNombre(),
                 producto.getPrecio(),
-                producto.getStock()
+                producto.getStock(),
+                producto.getId_tipo_producto().getId_tipo_producto()/*SEGUIR CON ESTO PARA*/
         );
     }
 

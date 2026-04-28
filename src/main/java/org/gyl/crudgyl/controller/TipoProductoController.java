@@ -1,10 +1,8 @@
 package org.gyl.crudgyl.controller;
 
 import jakarta.validation.Valid;
-import org.gyl.crudgyl.dto.ProductoRequestDTO;
-import org.gyl.crudgyl.dto.ProductoResponseDTO;
-import org.gyl.crudgyl.dto.TipoProductoRequestDTO;
-import org.gyl.crudgyl.dto.TipoProductoResponseDTO;
+import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoRequestDTO;
+import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.service.impl.TipoProductoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

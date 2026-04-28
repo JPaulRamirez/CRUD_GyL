@@ -1,7 +1,7 @@
 package org.gyl.crudgyl.service;
 
-import org.gyl.crudgyl.dto.ProductoRequestDTO;
-import org.gyl.crudgyl.dto.ProductoResponseDTO;
+import org.gyl.crudgyl.dto.ProductoDto.ProductoRequestDTO;
+import org.gyl.crudgyl.dto.ProductoDto.ProductoResponseDTO;
 
 import java.util.List;
 
