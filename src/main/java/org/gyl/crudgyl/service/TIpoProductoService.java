@@ -12,7 +12,7 @@ public interface TIpoProductoService {
 
     List<TipoProductoResponseDTO> listar();
 
-    TipoProductoResponseDTO BuscarPorId(Long id);
+    TipoProductoResponseDTO buscarPorId(Long id);
 
     TipoProductoResponseDTO actualizar(Long id , TipoProductoRequestDTO dto);
 

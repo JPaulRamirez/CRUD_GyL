@@ -37,7 +37,7 @@ public class TipoProductoService implements TIpoProductoService {
     }
 
     @Override
-    public TipoProductoResponseDTO BuscarPorId(Long id) {
+    public TipoProductoResponseDTO buscarPorId(Long id) {
         return tipoProductoRepository.findById(id)
                 .map(TipoProductoMapper::ToResponseDTO)
                 .orElseThrow(() -> new RecursoNoEncontradoException(
