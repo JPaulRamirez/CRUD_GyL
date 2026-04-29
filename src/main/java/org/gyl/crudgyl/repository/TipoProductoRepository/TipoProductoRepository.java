@@ -1,6 +1,6 @@
 package org.gyl.crudgyl.repository.TipoProductoRepository;
 
-import org.gyl.crudgyl.entity.TipoProductoEntity.TipoProducto;
+import org.gyl.crudgyl.entity.TipoProducto.TipoProducto;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
