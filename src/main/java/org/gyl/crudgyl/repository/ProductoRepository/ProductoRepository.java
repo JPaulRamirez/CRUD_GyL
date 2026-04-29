@@ -1,6 +1,6 @@
-package org.gyl.crudgyl.repository;
+package org.gyl.crudgyl.repository.ProductoRepository;
 
-import org.gyl.crudgyl.entity.Producto;
+import org.gyl.crudgyl.entity.ProductoEntity.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

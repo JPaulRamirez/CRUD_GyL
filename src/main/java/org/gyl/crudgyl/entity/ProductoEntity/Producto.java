@@ -1,10 +1,11 @@
-package org.gyl.crudgyl.entity;
+package org.gyl.crudgyl.entity.ProductoEntity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.gyl.crudgyl.entity.TipoProductoEntity.TipoProducto;
 
 @Entity
 @Table(name="productos")

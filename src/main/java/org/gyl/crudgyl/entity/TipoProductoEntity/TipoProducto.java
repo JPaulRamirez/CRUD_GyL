@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.entity;
+package org.gyl.crudgyl.entity.TipoProductoEntity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
