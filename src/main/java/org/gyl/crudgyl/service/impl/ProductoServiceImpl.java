@@ -3,9 +3,11 @@ package org.gyl.crudgyl.service.impl;
 import org.gyl.crudgyl.dto.ProductoDto.ProductoRequestDTO;
 import org.gyl.crudgyl.dto.ProductoDto.ProductoResponseDTO;
 import org.gyl.crudgyl.entity.Producto;
+import org.gyl.crudgyl.entity.TipoProducto;
 import org.gyl.crudgyl.exception.RecursoNoEncontradoException;
 import org.gyl.crudgyl.mapper.ProductoMapper;
 import org.gyl.crudgyl.repository.ProductoRepository;
+import org.gyl.crudgyl.repository.TipoProductoRepository;
 import org.gyl.crudgyl.service.ProductoService;
 import org.springframework.stereotype.Service;
 
@@ -14,15 +16,23 @@ import java.util.List;
 @Service
 public class ProductoServiceImpl implements ProductoService {
 
-    private ProductoRepository productoRepository;
+    private final ProductoRepository productoRepository;
+    private final TipoProductoRepository tipoProductoRepository;
 
-    public ProductoServiceImpl(ProductoRepository productoRepository){
+    public ProductoServiceImpl(ProductoRepository productoRepository, TipoProductoRepository tipoProductoRepository){
         this.productoRepository = productoRepository;
+        this.tipoProductoRepository = tipoProductoRepository;
     }
 
     @Override
     public ProductoResponseDTO crear(ProductoRequestDTO dto) {
-        Producto producto = ProductoMapper.toEntity(dto);
+
+        TipoProducto tipoProducto = tipoProductoRepository.findById(dto.id_tipo_producto())
+                .orElseThrow(() -> new RecursoNoEncontradoException(
+                "No se encontró el id: " + dto.id_tipo_producto()
+        ));
+
+        Producto producto = ProductoMapper.toEntity(dto,tipoProducto);
         Producto guardado = productoRepository.save(producto);
         return ProductoMapper.toResponseDTO(guardado);
     }
@@ -45,13 +55,17 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
-    public ProductoResponseDTO actualizar(Long id, ProductoRequestDTO dto) {
+    public ProductoResponseDTO actualizar(Long id, ProductoRequestDTO productoRequestDTO) {
         Producto producto = productoRepository.findById(id)
                 .orElseThrow(() -> new RecursoNoEncontradoException(
                         "No se encontró el id" + id
                 ));
+        TipoProducto tipoProducto = tipoProductoRepository.findById(productoRequestDTO.id_tipo_producto())
+                .orElseThrow(() -> new RecursoNoEncontradoException(
+                        "No se encontró el id" + productoRequestDTO.id_tipo_producto()
+                ));
 
-        ProductoMapper.updateEntity(producto,dto);
+        ProductoMapper.updateEntity(producto,productoRequestDTO,tipoProducto);
         Producto guardado = productoRepository.save(producto);
         return ProductoMapper.toResponseDTO(guardado);
     }

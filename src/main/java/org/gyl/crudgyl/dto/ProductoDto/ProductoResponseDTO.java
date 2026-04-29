@@ -5,6 +5,7 @@ public record ProductoResponseDTO(
         String nombre,
         Double precio,
         Integer stock,
-        Long id_tipo_producto
+        Long id_tipo_producto,
+        String nombre_tipo_producto
 ) {
 }

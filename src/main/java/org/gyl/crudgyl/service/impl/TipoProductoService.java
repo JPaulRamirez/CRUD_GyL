@@ -24,6 +24,7 @@ public class TipoProductoService implements TIpoProductoService {
 
     @Override
     public TipoProductoResponseDTO crear(TipoProductoRequestDTO tipoProductoRequestDTO) {
+
         TipoProducto tipoProducto = TipoProductoMapper.toEntity(tipoProductoRequestDTO);
         TipoProducto guardado = tipoProductoRepository.save(tipoProducto);
         return TipoProductoMapper.ToResponseDTO(guardado);
