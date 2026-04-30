@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.dto.ProductoDto;
+package org.gyl.crudgyl.dto.Producto;
 
 public record ProductoResponseDTO(
         long id,

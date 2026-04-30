@@ -1,8 +1,8 @@
 package org.gyl.crudgyl.service;
 
 
-import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoRequestDTO;
-import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoResponseDTO;
+import org.gyl.crudgyl.dto.TipoProducto.TipoProductoRequestDTO;
+import org.gyl.crudgyl.dto.TipoProducto.TipoProductoResponseDTO;
 
 import java.util.List;
 

@@ -15,8 +15,8 @@ import org.gyl.crudgyl.entity.TipoProducto.TipoProducto;
 @AllArgsConstructor
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false, length = 100)
     private String nombre;

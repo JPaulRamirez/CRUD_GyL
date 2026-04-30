@@ -13,14 +13,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cliente {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id_cliente;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_cliente;
 
     @Column(nullable = false, length = 100)
     private String nombre;
-
     @Column(nullable = false, length = 100)
     private String apellido;
     @Column(nullable = false, length = 100)

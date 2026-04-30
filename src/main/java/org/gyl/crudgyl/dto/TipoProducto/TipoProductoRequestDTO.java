@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.dto.TipoProductoDto;
+package org.gyl.crudgyl.dto.TipoProducto;
 
 import jakarta.validation.constraints.NotBlank;
 
