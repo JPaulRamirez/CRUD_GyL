@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.mapper.ProductoMapper;
+package org.gyl.crudgyl.mapper.Producto;
 
 import org.gyl.crudgyl.dto.Producto.ProductoRequestDTO;
 import org.gyl.crudgyl.dto.Producto.ProductoResponseDTO;

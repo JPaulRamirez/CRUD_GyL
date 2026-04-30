@@ -4,7 +4,7 @@ import org.gyl.crudgyl.dto.TipoProducto.TipoProductoRequestDTO;
 import org.gyl.crudgyl.dto.TipoProducto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.entity.TipoProducto.TipoProducto;
 import org.gyl.crudgyl.exception.RecursoNoEncontradoException;
-import org.gyl.crudgyl.mapper.TipoProductoMapper.TipoProductoMapper;
+import org.gyl.crudgyl.mapper.TipoProducto.TipoProductoMapper;
 import org.gyl.crudgyl.repository.TipoProducto.TipoProductoRepository;
 import org.gyl.crudgyl.service.TIpoProductoService;
 import org.springframework.stereotype.Service;
@@ -27,20 +27,20 @@ public class TipoProductoServiceImpl implements TIpoProductoService {
 
         TipoProducto tipoProducto = TipoProductoMapper.toEntity(tipoProductoRequestDTO);
         TipoProducto guardado = tipoProductoRepository.save(tipoProducto);
-        return TipoProductoMapper.ToResponseDTO(guardado);
+        return TipoProductoMapper.toResponseDTO(guardado);
     }
 
     @Override
     public List<TipoProductoResponseDTO> listar() {
         return tipoProductoRepository.findAll().stream()
-                .map(TipoProductoMapper::ToResponseDTO)
+                .map(TipoProductoMapper::toResponseDTO)
                 .toList();
     }
 
     @Override
     public TipoProductoResponseDTO buscarPorId(Long id) {
         return tipoProductoRepository.findById(id)
-                .map(TipoProductoMapper::ToResponseDTO)
+                .map(TipoProductoMapper::toResponseDTO)
                 .orElseThrow(() -> new RecursoNoEncontradoException(
                         "No se encontró el id: " + id
                 ));
@@ -55,7 +55,7 @@ public class TipoProductoServiceImpl implements TIpoProductoService {
 
         TipoProductoMapper.updateEntity(tipoProducto,dto);
         TipoProducto guardado = tipoProductoRepository.save(tipoProducto);
-        return TipoProductoMapper.ToResponseDTO(guardado);
+        return TipoProductoMapper.toResponseDTO(guardado);
     }
 
     @Override
