@@ -6,8 +6,8 @@ import org.gyl.crudgyl.entity.Producto.Producto;
 import org.gyl.crudgyl.entity.TipoProducto.TipoProducto;
 import org.gyl.crudgyl.exception.RecursoNoEncontradoException;
 import org.gyl.crudgyl.mapper.ProductoMapper.ProductoMapper;
-import org.gyl.crudgyl.repository.ProductoRepository.ProductoRepository;
-import org.gyl.crudgyl.repository.TipoProductoRepository.TipoProductoRepository;
+import org.gyl.crudgyl.repository.Producto.ProductoRepository;
+import org.gyl.crudgyl.repository.TipoProducto.TipoProductoRepository;
 import org.gyl.crudgyl.service.ProductoService;
 import org.springframework.stereotype.Service;
 

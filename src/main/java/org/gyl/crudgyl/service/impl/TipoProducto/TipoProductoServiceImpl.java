@@ -5,18 +5,18 @@ import org.gyl.crudgyl.dto.TipoProductoDto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.entity.TipoProducto.TipoProducto;
 import org.gyl.crudgyl.exception.RecursoNoEncontradoException;
 import org.gyl.crudgyl.mapper.TipoProductoMapper.TipoProductoMapper;
-import org.gyl.crudgyl.repository.TipoProductoRepository.TipoProductoRepository;
+import org.gyl.crudgyl.repository.TipoProducto.TipoProductoRepository;
 import org.gyl.crudgyl.service.TIpoProductoService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class TipoProductoService implements TIpoProductoService {
+public class TipoProductoServiceImpl implements TIpoProductoService {
 
     private TipoProductoRepository tipoProductoRepository;
 
-    public TipoProductoService(TipoProductoRepository tipoProductoRepository)
+    public TipoProductoServiceImpl(TipoProductoRepository tipoProductoRepository)
     {
         this.tipoProductoRepository = tipoProductoRepository;
     }

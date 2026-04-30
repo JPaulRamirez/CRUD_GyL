@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.controller.ProductoController;
+package org.gyl.crudgyl.controller.Producto;
 
 import jakarta.validation.Valid;
 import org.gyl.crudgyl.dto.ProductoDto.ProductoRequestDTO;
