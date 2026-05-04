@@ -32,4 +32,9 @@ public class ClienteController {
     public List<ClienteResponseDto> listar() {
         return clienteService.listar();
     }
+
+    @GetMapping("/{id}")
+    public ClienteResponseDto buscarPorId(@PathVariable Long id) {
+        return clienteService.buscarPorId(id);
+    }
 }

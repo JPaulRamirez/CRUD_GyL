@@ -11,7 +11,7 @@ public class VentaMapper {
     public static Venta toEntity(VentaRequestDto dto, Cliente cliente) {
         Venta venta = new Venta();
         venta.setFecha_venta(dto.fecha_venta());
-        venta.setTotal(dto.total());
+        venta.setTotal(0.0);
         venta.setCliente(cliente);
         return venta;
     }
