@@ -12,4 +12,6 @@ public interface ClienteService {
     List<ClienteResponseDto> listar();
 
     ClienteResponseDto buscarPorId(Long id);
+
+    ClienteResponseDto actualizar(Long id, ClienteRequestDto dto);
 }

@@ -32,4 +32,13 @@ public class ClienteMapper {
                 cliente.getDireccion()
         );
     }
+
+    public static void updateEntity(Cliente cliente, ClienteRequestDto clienteRequestDto)
+    {
+        cliente.setNombre(clienteRequestDto.nombre());
+        cliente.setApellido(clienteRequestDto.apellido());
+        cliente.setCorreo(clienteRequestDto.correo());
+        cliente.setTelefono(clienteRequestDto.telefono());
+        cliente.setDireccion(clienteRequestDto.direccion());
+    }
 }

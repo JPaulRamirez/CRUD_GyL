@@ -45,4 +45,16 @@ public class ClienteServiceImpl implements ClienteService {
                         "No se encontró el cliente con id: " + id
                 ));
     }
+    @Override
+    public ClienteResponseDto actualizar(Long id, ClienteRequestDto dto) {
+        Cliente cliente = clienteRepository.findById(id)
+                .orElseThrow(() -> new RecursoNoEncontradoException(
+                        "No se encontro el cliente con id: " + id
+                ));
+
+        ClienteMapper.updateEntity(cliente, dto);
+        Cliente guardado = clienteRepository.save(cliente);
+
+        return ClienteMapper.toResponseDto(guardado);
+    }
 }
