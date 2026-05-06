@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RecursoNoEncontradoException.class)
     public ResponseEntity<ErrorResponse> manejarRecursoNoEncontrado(RecursoNoEncontradoException ex)
     {
-        ErrorResponse error = new ErrorResponse(LocalDateTime.now(), HttpStatus.NOT_FOUND.value(), "Recurso no encontrado", ex.getMessage());
+        ErrorResponse error = new ErrorResponse( HttpStatus.NOT_FOUND.value(), "Recurso no encontrado", ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -28,7 +28,6 @@ public class GlobalExceptionHandler {
                 .orElse("Error de validación");
 
         ErrorResponse error = new ErrorResponse(
-                LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value(),
                 "Datos inválidos",
                 mensaje
