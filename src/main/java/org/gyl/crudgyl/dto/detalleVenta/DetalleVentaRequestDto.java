@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.dto.DetalleVenta;
+package org.gyl.crudgyl.dto.detalleVenta;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 public record DetalleVentaRequestDto(

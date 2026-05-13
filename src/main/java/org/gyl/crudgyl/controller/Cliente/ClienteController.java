@@ -3,7 +3,6 @@ package org.gyl.crudgyl.controller.Cliente;
 import jakarta.validation.Valid;
 import org.gyl.crudgyl.dto.Cliente.ClienteRequestDto;
 import org.gyl.crudgyl.dto.Cliente.ClienteResponseDto;
-import org.gyl.crudgyl.dto.TipoProducto.TipoProductoResponseDTO;
 import org.gyl.crudgyl.service.ClienteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

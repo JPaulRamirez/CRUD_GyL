@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.dto.DetalleVenta;
+package org.gyl.crudgyl.dto.detalleVenta;
 
 public record DetalleVentaResponseDto(
         Long id_detalle_venta,

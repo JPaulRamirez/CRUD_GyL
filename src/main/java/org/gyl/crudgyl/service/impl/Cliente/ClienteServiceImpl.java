@@ -22,8 +22,6 @@ public class ClienteServiceImpl implements ClienteService {
         this.clienteRepository = clienteRepository;
     }
 
-
-
     @Override
     public ClienteResponseDto crear(ClienteRequestDto dto) {
         Cliente cliente = ClienteMapper.ToEntity(dto);

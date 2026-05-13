@@ -1,4 +1,4 @@
-package org.gyl.crudgyl.repository.TipoProducto;
+package org.gyl.crudgyl.repository.tipoProducto;
 
 import org.gyl.crudgyl.entity.TipoProducto.TipoProducto;
 import org.springframework.stereotype.Repository;

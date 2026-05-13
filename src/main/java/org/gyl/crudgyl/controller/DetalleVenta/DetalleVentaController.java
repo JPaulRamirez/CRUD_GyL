@@ -1,8 +1,8 @@
 package org.gyl.crudgyl.controller.DetalleVenta;
 
 import jakarta.validation.Valid;
-import org.gyl.crudgyl.dto.DetalleVenta.DetalleVentaRequestDto;
-import org.gyl.crudgyl.dto.DetalleVenta.DetalleVentaResponseDto;
+import org.gyl.crudgyl.dto.detalleVenta.DetalleVentaRequestDto;
+import org.gyl.crudgyl.dto.detalleVenta.DetalleVentaResponseDto;
 import org.gyl.crudgyl.service.DetalleVentaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
